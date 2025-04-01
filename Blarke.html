@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlarkeAI</title>
+    <link rel="stylesheet" href="Blarke.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>ورود / ثبت‌نام</h2>
+        <input type="text" id="username" placeholder="نام کاربری">
+        <input type="password" id="password" placeholder="رمز عبور">
+        <button onclick="register()">ثبت‌نام</button>
+        <button onclick="login()">ورود</button>
+        <p id="authMessage"></p>
+    </div>
+    <header>
+        <h1>BlarkeAI </h1>
+        <select id="aiVersion" onchange="changeVersion()">
+            <option value="v1.0">نسخه 1.0</option>
+            <option value="v2.0">نسخه 2.0</option>
+            <option value="v3.0">نسخه 3.0</option>
+        </select>
+    </header>
+   
+    <div class="chat-container">
+        <div class="chat-box" id="chatBox"></div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="پیام خود را وارد کنید..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">ارسال</button>
+        </div>
+
+    </div>
+    <script src="Blarke.js"></script>
+</body>
+</html>
